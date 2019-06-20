@@ -20,12 +20,11 @@ export default class PlaceholderImage extends Component {
     return (
       <View
         style={{
-          backgroundColor: "#EEE",
           width: this.props.style.width || "100%",
           height: this.props.style.height || "100%"
         }}
       >
-        <Image {...this.props} source={require("./logo.png")} />
+        {/* <Image {...this.props} source={require("./placeholder.png")} /> */}
         <Animated.Image
           {...this.props}
           style={[
