@@ -1,11 +1,11 @@
 import { createStackNavigator } from "react-navigation";
 
-import Main from "./pages/main";
+import Pokedex from "./pages/pokedex";
 import Pokemon from "./pages/pokemon";
 
 export default createStackNavigator(
   {
-    Main,
+    Pokedex,
     Pokemon
   },
   {
