@@ -1,32 +1,46 @@
 import React, { Component } from "react";
-import {
-  Text,
-  View,
-  FlatList,
-  TouchableOpacity,
-  Image,
-  StyleSheet
-} from "react-native";
-import ShimmerPlaceHolder from "react-native-shimmer-placeholder";
+import { TouchableOpacity, Image, SafeAreaView } from "react-native";
+// import ShimmerPlaceHolder from "react-native-shimmer-placeholder";
 import PlaceholderImage from "../../components/PlaceholderImage";
 import api from "../../services/api";
-import { Title, Container } from "./styles";
-let placeholder = [
-  { id: 1, loaded: false },
-  { id: 2, loaded: false },
-  { id: 3, loaded: false },
-  { id: 4, loaded: false },
-  { id: 5, loaded: false },
-  { id: 6, loaded: false },
-  { id: 7, loaded: false },
-  { id: 8, loaded: false }
-];
+import {
+  Title,
+  Container,
+  Pokemon,
+  PokemonList,
+  Name,
+  InfoImage,
+  Types,
+  Type,
+  TypeText,
+  NameNumber,
+  Number,
+  PokemonImage
+} from "./styles";
+// let placeholder = [
+//   { id: 1, loaded: false, color: "#CCC" },
+//   { id: 2, loaded: false, color: "#CCC" },
+//   { id: 3, loaded: false, color: "#CCC" },
+//   { id: 4, loaded: false, color: "#CCC" },
+//   { id: 5, loaded: false, color: "#CCC" },
+//   { id: 6, loaded: false, color: "#CCC" },
+//   { id: 7, loaded: false, color: "#CCC" },
+//   { id: 8, loaded: false, color: "#CCC" }
+// ];
 export default class Pokedex extends Component {
   componentDidMount() {
     this.loadPokemons();
   }
+  constructor(props) {
+    super(props);
+
+    this.viewabilityConfig = {
+      // waitForInteraction: true,
+      itemVisiblePercentThreshold: 100
+    };
+  }
   state = {
-    pokemons: placeholder,
+    pokemons: [],
     page: 1,
     total: 0,
     visible: false
@@ -96,37 +110,63 @@ export default class Pokedex extends Component {
     this.loadPokemons(pageNumber);
   };
   renderItem = ({ item }) => (
-    <View>
-      <View
-        style={{
-          marginVertical: 20,
-          height: 300,
-          backgroundColor: item.color
-        }}
-      >
-        {item.loaded && (
-          <PlaceholderImage
-            style={{ width: 300, height: 300, borderRadius: 32 }}
-            source={{ uri: item.image }}
-          />
-        )}
-      </View>
-      <ShimmerPlaceHolder
-        style={{ alignSelf: "stretch", marginBottom: 10 }}
-        autoRun={true}
-        visible={this.state.visible}
-      >
-        <Text>{item.name}</Text>
-      </ShimmerPlaceHolder>
-
+    <Pokemon style={{ backgroundColor: item.color }}>
       <TouchableOpacity
         onPress={() => {
           this.props.navigation.navigate("Pokemon", { pokemon: item });
         }}
       >
-        <Text>Acessar</Text>
+        <NameNumber>
+          {/* <ShimmerPlaceHolder
+            style={{ alignSelf: "stretch", marginBottom: 10 }}
+            autoRun={true}
+            visible={this.state.visible}
+          > */}
+          <Name>{item.name}</Name>
+          {/* </ShimmerPlaceHolder> */}
+          {/* <ShimmerPlaceHolder
+            style={{ alignSelf: "stretch", marginBottom: 10 }}
+            autoRun={true}
+            visible={this.state.visible}
+          > */}
+          <Number>#{("0000" + item.id).toString().slice(-3)}</Number>
+          {/* </ShimmerPlaceHolder> */}
+        </NameNumber>
+        <InfoImage>
+          <Types>
+            {item.data &&
+              item.data.types &&
+              item.data.types.map(tipo => (
+                <Type>
+                  <TypeText>{tipo.type.name}</TypeText>
+                </Type>
+              ))}
+          </Types>
+          {item.loaded && (
+            <PokemonImage>
+              <PlaceholderImage
+                style={{
+                  width: 100,
+                  height: 100,
+                  alignItems: "flex-end"
+                }}
+                source={{ uri: item.image }}
+              />
+            </PokemonImage>
+          )}
+        </InfoImage>
+        <Image
+          style={{
+            width: 83,
+            height: 83,
+            position: "absolute",
+            bottom: -15,
+            right: -15
+          }}
+          source={require("../../../assets/images/bg-pokeball.png")}
+        />
       </TouchableOpacity>
-    </View>
+    </Pokemon>
   );
   handleLazyLoad = ({ viewableItems }) => {
     console.log("viewableItems", viewableItems);
@@ -143,15 +183,30 @@ export default class Pokedex extends Component {
   render() {
     return (
       <Container>
-        <Title>Pokemons</Title>
-        <FlatList
-          data={this.state.pokemons}
-          keyExtractor={item => item.id}
-          renderItem={this.renderItem}
-          onEndReached={this.loadMore}
-          onEndReachedThreshold={0.1}
-          onViewableItemsChanged={this.handleLazyLoad}
+        <Image
+          style={{
+            width: 200,
+            height: 200,
+            position: "absolute",
+            top: -100,
+            right: -0
+          }}
+          source={require("../../../assets/images/bg-pokeball.png")}
         />
+        <Title>Pokedex</Title>
+
+        <SafeAreaView>
+          <PokemonList
+            data={this.state.pokemons}
+            keyExtractor={item => item.id}
+            renderItem={this.renderItem}
+            onEndReached={this.loadMore}
+            onEndReachedThreshold={0.1}
+            onViewableItemsChanged={this.handleLazyLoad}
+            viewabilityConfig={this.viewabilityConfig}
+            numColumns={2}
+          />
+        </SafeAreaView>
       </Container>
     );
   }

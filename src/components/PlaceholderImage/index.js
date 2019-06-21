@@ -24,7 +24,10 @@ export default class PlaceholderImage extends Component {
           height: this.props.style.height || "100%"
         }}
       >
-        {/* <Image {...this.props} source={require("./placeholder.png")} /> */}
+        {/* <Image
+          {...this.props}
+          source={require("../../../assets/images/bg-pokeball.png")}
+        /> */}
         <Animated.Image
           {...this.props}
           style={[
