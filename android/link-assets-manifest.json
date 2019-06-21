@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/.DS_Store",
+      "sha1": "ece4f00dd645151664af77a8c20b0044f024763c"
+    },
+    {
+      "path": "assets/fonts/Poppins ExtraLight.ttf",
+      "sha1": "05d356f14c2ebbbe4e3f32d0640999602661e6ad"
+    },
+    {
+      "path": "assets/fonts/Poppins SemiBold.ttf",
+      "sha1": "e36bef7e6b45efff4b18780043f95611fc4246c9"
+    },
+    {
+      "path": "assets/fonts/Poppins.ttf",
+      "sha1": "9b353cec56d585154a440b2b883cd6f779ef35e3"
+    }
+  ]
+}

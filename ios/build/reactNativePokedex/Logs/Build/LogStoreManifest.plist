@@ -6,38 +6,6 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>05F0A288-F8C5-4532-8F97-9E81F77DA067</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>05F0A288-F8C5-4532-8F97-9E81F77DA067.xcactivitylog</string>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>reactNativePokedex project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>reactNativePokedex</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building project reactNativePokedex with scheme reactNativePokedex and configuration Debug</string>
-			<key>timeStartedRecording</key>
-			<real>582644479.65264297</real>
-			<key>timeStoppedRecording</key>
-			<real>582644481.77982295</real>
-			<key>title</key>
-			<string>Building project reactNativePokedex with scheme reactNativePokedex and configuration Debug</string>
-			<key>uniqueIdentifier</key>
-			<string>05F0A288-F8C5-4532-8F97-9E81F77DA067</string>
-		</dict>
 		<key>1E8EA5EE-1671-4A06-9610-C34F495326C5</key>
 		<dict>
 			<key>className</key>
@@ -69,6 +37,38 @@
 			<string>Building project reactNativePokedex with scheme reactNativePokedex and configuration Debug</string>
 			<key>uniqueIdentifier</key>
 			<string>1E8EA5EE-1671-4A06-9610-C34F495326C5</string>
+		</dict>
+		<key>9E89CEBA-3EF4-4218-968E-3CAD9AE4B9E8</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9E89CEBA-3EF4-4218-968E-3CAD9AE4B9E8.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>reactNativePokedex project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>reactNativePokedex</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project reactNativePokedex with scheme reactNativePokedex and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>582814561.09354198</real>
+			<key>timeStoppedRecording</key>
+			<real>582814572.93127298</real>
+			<key>title</key>
+			<string>Building project reactNativePokedex with scheme reactNativePokedex and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>9E89CEBA-3EF4-4218-968E-3CAD9AE4B9E8</string>
 		</dict>
 	</dict>
 </dict>

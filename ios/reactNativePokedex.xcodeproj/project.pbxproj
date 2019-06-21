@@ -42,6 +42,9 @@
 		3E604872BBDB439AA603C690 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E140DB70199F4D10AB07201E /* libRNGestureHandler.a */; };
 		029315BD69EF45C2B41B01B5 /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D4878AE98146328885EAC8 /* libRNGestureHandler-tvOS.a */; };
 		F435A2A8CA59497590ABCDAD /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D41E7ECFDD4547909F78C49D /* libBVLinearGradient.a */; };
+		AAEEFABCA6C0484D8186B6E3 /* Poppins ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07DD184CC1DC4087A6613541 /* Poppins ExtraLight.ttf */; };
+		5DA2A19CA3554F66A21ED66A /* Poppins SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86F7DD9CC3A7425D841B1340 /* Poppins SemiBold.ttf */; };
+		14CC4BBC31C84C64AAF2FFD8 /* Poppins.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6C9CC1B6B45473393F87C75 /* Poppins.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -354,6 +357,9 @@
 		19D4878AE98146328885EAC8 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; name = "libRNGestureHandler-tvOS.a"; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		343693C2545E45CF9E6B1B22 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; name = "BVLinearGradient.xcodeproj"; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		D41E7ECFDD4547909F78C49D /* libBVLinearGradient.a */ = {isa = PBXFileReference; name = "libBVLinearGradient.a"; path = "libBVLinearGradient.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		07DD184CC1DC4087A6613541 /* Poppins ExtraLight.ttf */ = {isa = PBXFileReference; name = "Poppins ExtraLight.ttf"; path = "../assets/fonts/Poppins ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		86F7DD9CC3A7425D841B1340 /* Poppins SemiBold.ttf */ = {isa = PBXFileReference; name = "Poppins SemiBold.ttf"; path = "../assets/fonts/Poppins SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C6C9CC1B6B45473393F87C75 /* Poppins.ttf */ = {isa = PBXFileReference; name = "Poppins.ttf"; path = "../assets/fonts/Poppins.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -597,6 +603,7 @@
 				00E356EF1AD99517003FC87E /* reactNativePokedexTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				19A4AA774B7444A6937C2EE3 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -622,6 +629,17 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		19A4AA774B7444A6937C2EE3 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				07DD184CC1DC4087A6613541 /* Poppins ExtraLight.ttf */,
+				86F7DD9CC3A7425D841B1340 /* Poppins SemiBold.ttf */,
+				C6C9CC1B6B45473393F87C75 /* Poppins.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -1069,6 +1087,9 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				AAEEFABCA6C0484D8186B6E3 /* Poppins ExtraLight.ttf in Resources */,
+				5DA2A19CA3554F66A21ED66A /* Poppins SemiBold.ttf in Resources */,
+				14CC4BBC31C84C64AAF2FFD8 /* Poppins.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

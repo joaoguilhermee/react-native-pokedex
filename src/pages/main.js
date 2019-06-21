@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Text, View, FlatList, TouchableOpacity, Image } from "react-native";
+import {
+  Text,
+  View,
+  FlatList,
+  TouchableOpacity,
+  Image,
+  StyleSheet
+} from "react-native";
 import ShimmerPlaceHolder from "react-native-shimmer-placeholder";
 import PlaceholderImage from "../components/PlaceholderImage";
 import api from "../services/api";
@@ -136,8 +143,7 @@ export default class Main extends Component {
   render() {
     return (
       <View>
-        <Text>Pokemons</Text>
-
+        <Text style={styles.instructions}>Pokemons</Text>
         <FlatList
           data={this.state.pokemons}
           keyExtractor={item => item.id}
@@ -150,3 +156,13 @@ export default class Main extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  instructions: {
+    fontFamily: "Poppins",
+    fontSize: 40,
+    textAlign: "center",
+    color: "#333333",
+    marginBottom: 5
+  }
+});
