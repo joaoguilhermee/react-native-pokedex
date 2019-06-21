@@ -30,6 +30,22 @@ import {
 export default class Pokedex extends Component {
   componentDidMount() {
     this.loadPokemons();
+
+    let colors = [];
+    colors["red"] = "#FB6C6C";
+    colors["green"] = "#48D0B0";
+    colors["blue"] = "#77BDFE";
+    colors["yellow"] = "#FFCE4B";
+    colors["brown"] = "#B1736C";
+    colors["purple"] = "#7C538C";
+    colors["black"] = "#333";
+    colors["pink"] = "pink";
+    colors["gray"] = "#aaa";
+    colors["white"] = "#ccc";
+
+    this.setState({
+      colors
+    });
   }
   constructor(props) {
     super(props);
@@ -40,6 +56,7 @@ export default class Pokedex extends Component {
     };
   }
   state = {
+    colors: [],
     pokemons: [],
     page: 1,
     total: 0,
@@ -63,7 +80,8 @@ export default class Pokedex extends Component {
             species = species.data;
             pokemon.species = species;
 
-            pokemon.color = species.color.name;
+            console.log("COLORs", this.state.colors);
+            pokemon.color = this.state.colors[species.color.name];
           });
         });
 
@@ -98,6 +116,8 @@ export default class Pokedex extends Component {
       });
 
       this.setState({ visible: true });
+
+      console.log("COLOR", this.state.colors);
     });
   };
   loadMore = () => {
