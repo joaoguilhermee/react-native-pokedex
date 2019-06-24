@@ -63,6 +63,7 @@ export default class Pokedex extends Component {
     visible: false
   };
   loadItem = pokemon => {
+    pokemon.id = pokemon.url.split("/").reverse()[1];
     try {
       console.log("BEFORE", pokemon);
       api
@@ -99,9 +100,7 @@ export default class Pokedex extends Component {
       const { results } = data;
       const total = data.count;
       let pokemons;
-
-      results.map(item => (item.id = item.url.split("/").reverse()[1]));
-
+      results.map(pokemon => this.loadItem(pokemon));
       console.log("IDSzado", results);
       if (page == 1) {
         pokemons = results;
@@ -192,7 +191,7 @@ export default class Pokedex extends Component {
     console.log("viewableItems", viewableItems);
     const newData = this.state.pokemons.map(pokemon =>
       viewableItems.find(({ item }) => item.id === pokemon.id)
-        ? this.loadItem(pokemon)
+        ? pokemon
         : pokemon
     );
 
@@ -221,8 +220,8 @@ export default class Pokedex extends Component {
             keyExtractor={item => item.id}
             renderItem={this.renderItem}
             onEndReached={this.loadMore}
-            onEndReachedThreshold={0.1}
-            onViewableItemsChanged={this.handleLazyLoad}
+            onEndReachedThreshold={0.3}
+            //  onViewableItemsChanged={this.handleLazyLoad}
             viewabilityConfig={this.viewabilityConfig}
             numColumns={2}
           />
