@@ -65,7 +65,6 @@ export default class Pokedex extends Component {
   loadItem = pokemon => {
     pokemon.id = pokemon.url.split("/").reverse()[1];
     try {
-      console.log("BEFORE", pokemon);
       api
         .get(`/pokemon/${pokemon.id}`)
         .then(response => {
@@ -80,16 +79,13 @@ export default class Pokedex extends Component {
           api.get(`/pokemon-species/${pokemon.id}`).then(species => {
             species = species.data;
             pokemon.species = species;
-
-            console.log("COLORs", this.state.colors);
             pokemon.color = this.state.colors[species.color.name];
           });
         });
 
-      console.log("AFTER", pokemon);
       return pokemon;
     } catch (error) {
-      console.log(error);
+      console.log("error - load item", error);
     }
   };
   loadPokemons = async (page = 1) => {
@@ -101,7 +97,7 @@ export default class Pokedex extends Component {
       const total = data.count;
       let pokemons;
       results.map(pokemon => this.loadItem(pokemon));
-      console.log("IDSzado", results);
+
       if (page == 1) {
         pokemons = results;
       } else {
@@ -115,8 +111,6 @@ export default class Pokedex extends Component {
       });
 
       this.setState({ visible: true });
-
-      console.log("COLOR", this.state.colors);
     });
   };
   loadMore = () => {
@@ -188,7 +182,6 @@ export default class Pokedex extends Component {
     </Pokemon>
   );
   handleLazyLoad = ({ viewableItems }) => {
-    console.log("viewableItems", viewableItems);
     const newData = this.state.pokemons.map(pokemon =>
       viewableItems.find(({ item }) => item.id === pokemon.id)
         ? pokemon
@@ -196,8 +189,6 @@ export default class Pokedex extends Component {
     );
 
     this.setState({ pokemons: newData });
-
-    console.log("handleLazyLoad", this.state.pokemons);
   };
   render() {
     return (
@@ -221,7 +212,7 @@ export default class Pokedex extends Component {
             renderItem={this.renderItem}
             onEndReached={this.loadMore}
             onEndReachedThreshold={0.3}
-            //  onViewableItemsChanged={this.handleLazyLoad}
+            //  onViewableItemsChangedcons={this.handleLazyLoad}
             viewabilityConfig={this.viewabilityConfig}
             numColumns={2}
           />
