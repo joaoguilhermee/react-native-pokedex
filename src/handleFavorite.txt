@@ -1,8 +1,0 @@
-// function handleFavorite(id) {
-  //   const newFavorites = pokemons.map(pokemon => {
-  //     return pokemon.id === id
-  //       ? { ...pokemon, favorite: !pokemon.favorite }
-  //       : pokemon;
-  //   });
-  //   setPokemons(newFavorites);
-  // }
