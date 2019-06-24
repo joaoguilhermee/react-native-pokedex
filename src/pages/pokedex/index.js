@@ -121,13 +121,12 @@ export default function Pokedex() {
                   </Type>
                 ))}
             </Types>
-
             <PokemonImage>
               <PlaceholderImage
                 style={{
                   width: 100,
                   height: 100,
-                  alignItems: "flex-end"
+                  alignItems: "flex-start"
                 }}
                 source={{ uri: pokemon.item.image }}
               />
@@ -139,9 +138,10 @@ export default function Pokedex() {
               height: 83,
               position: "absolute",
               bottom: -15,
-              right: -15
+              right: -15,
+              zIndex: -1
             }}
-            source={require("../../../assets/images/bg-pokeball.png")}
+            source={require("../../../assets/images/bg-pokeball-white.png")}
           />
         </TouchableOpacity>
       </Pokemon>

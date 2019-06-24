@@ -19,16 +19,8 @@ export const Title = styled.Text`
 //   /* background: red;
 //   width: 100%; */
 // `;
-export const PokemonList = styled.FlatList// .attrs({
-//   contentContainerStyle: props => {
-//     return {
-//       // justifyContent: "space-between",
-//       // flexGrow: 0,
-//       // alignItems: "center"
-//     };
-//   }
-// })'
-`
+export const PokemonList = styled.FlatList`
+  // })' //   } //     }; //       // alignItems: "center" //       // flexGrow: 0, //       // justifyContent: "space-between", //     return { //   contentContainerStyle: props => { // .attrs({
   padding: 0 18px 0 8px;
 `;
 export const Pokemon = styled.View`
@@ -60,8 +52,9 @@ export const TypeText = styled.Text`
   text-align: center;
 `;
 export const InfoImage = styled.View`
+  justify-content: flex-end;
   flex-direction: row;
-  align-items: stretch;
+  align-content: flex-start;
 `;
 
 export const Name = styled.Text`
