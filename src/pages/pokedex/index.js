@@ -18,7 +18,8 @@ import {
   PokemonImage
 } from "./styles";
 
-export default function Pokedex() {
+export default function Pokedex(props) {
+  const { navigation } = props;
   let colors = [];
   colors["red"] = "#FB6C6C";
   colors["green"] = "#48D0B0";
@@ -35,7 +36,8 @@ export default function Pokedex() {
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   function viewPokemon(item) {
-    // navigation.navigate("Pokemon", { pokemon: item });
+    console.log(item);
+    navigation.navigate("Pokemon", { pokemon: item });
   }
 
   useEffect(() => {
