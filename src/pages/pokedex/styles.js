@@ -19,15 +19,16 @@ export const Title = styled.Text`
 //   /* background: red;
 //   width: 100%; */
 // `;
-export const PokemonList = styled.FlatList.attrs({
-  contentContainerStyle: props => {
-    return {
-      justifyContent: "space-between",
-      flexGrow: 0,
-      alignItems: "center"
-    };
-  }
-})`
+export const PokemonList = styled.FlatList// .attrs({
+//   contentContainerStyle: props => {
+//     return {
+//       // justifyContent: "space-between",
+//       // flexGrow: 0,
+//       // alignItems: "center"
+//     };
+//   }
+// })'
+`
   padding: 0 18px 0 8px;
 `;
 export const Pokemon = styled.View`
@@ -35,7 +36,7 @@ export const Pokemon = styled.View`
   margin-left: 10px;
   flex-basis: 45%;
   border-radius: 15px;
-  box-shadow: 0px 8px 15px rgba(48, 57, 67, 0.12);
+  /* box-shadow: 0px 8px 15px rgba(48, 57, 67, 0.12); */
   margin-bottom: 10px;
   padding: 10px;
   position: relative;

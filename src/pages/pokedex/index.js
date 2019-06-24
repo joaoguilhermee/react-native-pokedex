@@ -28,7 +28,7 @@ import {
 //   { id: 8, loaded: false, color: "#CCC" }
 // ];
 export default class Pokedex extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.loadPokemons();
 
     let colors = [];
@@ -39,7 +39,7 @@ export default class Pokedex extends Component {
     colors["brown"] = "#B1736C";
     colors["purple"] = "#7C538C";
     colors["black"] = "#333";
-    colors["pink"] = "pink";
+    colors["pink"] = "#ffc0cb";
     colors["gray"] = "#aaa";
     colors["white"] = "#ccc";
 
@@ -51,8 +51,8 @@ export default class Pokedex extends Component {
     super(props);
 
     this.viewabilityConfig = {
-      // waitForInteraction: true,
-      itemVisiblePercentThreshold: 100
+      waitForInteraction: true,
+      itemVisiblePercentThreshold: 60
     };
   }
   state = {
@@ -74,15 +74,16 @@ export default class Pokedex extends Component {
           pokemon.image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
             pokemon.id
           }.png`;
+
+          return pokemon;
         })
-        .then(response => {
+        .then(pokemon => {
           api.get(`/pokemon-species/${pokemon.id}`).then(species => {
             species = species.data;
             pokemon.species = species;
             pokemon.color = this.state.colors[species.color.name];
           });
         });
-
       return pokemon;
     } catch (error) {
       console.log("error - load item", error);
@@ -97,7 +98,7 @@ export default class Pokedex extends Component {
       const total = data.count;
       let pokemons;
       results.map(pokemon => this.loadItem(pokemon));
-
+      console.log("RESULTADO", results);
       if (page == 1) {
         pokemons = results;
       } else {
@@ -183,7 +184,7 @@ export default class Pokedex extends Component {
   );
   handleLazyLoad = ({ viewableItems }) => {
     const newData = this.state.pokemons.map(pokemon =>
-      viewableItems.find(({ item }) => item.id === pokemon.id)
+      viewableItems.find(({ item }) => item.name === pokemon.name)
         ? pokemon
         : pokemon
     );
@@ -208,10 +209,10 @@ export default class Pokedex extends Component {
         <SafeAreaView>
           <PokemonList
             data={this.state.pokemons}
-            keyExtractor={item => item.id}
+            keyExtractor={item => item.name}
             renderItem={this.renderItem}
             onEndReached={this.loadMore}
-            onEndReachedThreshold={0.3}
+            onEndReachedThreshold={0.4}
             //  onViewableItemsChangedcons={this.handleLazyLoad}
             viewabilityConfig={this.viewabilityConfig}
             numColumns={2}
