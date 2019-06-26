@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>6F7821F0-30A4-4CCC-8A58-0B2E1DE6FF07</key>
+		<key>2221889C-0777-43F2-9881-AEF131E72543</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>6F7821F0-30A4-4CCC-8A58-0B2E1DE6FF07.xcactivitylog</string>
+			<string>2221889C-0777-43F2-9881-AEF131E72543.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -30,45 +30,13 @@
 			<key>signature</key>
 			<string>Building project reactNativePokedex with scheme reactNativePokedex and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>583105169.250103</real>
+			<real>583262243.58527505</real>
 			<key>timeStoppedRecording</key>
-			<real>583105495.313416</real>
+			<real>583262272.48347497</real>
 			<key>title</key>
 			<string>Building project reactNativePokedex with scheme reactNativePokedex and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>6F7821F0-30A4-4CCC-8A58-0B2E1DE6FF07</string>
-		</dict>
-		<key>9A8B6F4A-7B18-4F10-87F2-CAAF3F60FBC6</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>9A8B6F4A-7B18-4F10-87F2-CAAF3F60FBC6.xcactivitylog</string>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>reactNativePokedex project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>reactNativePokedex</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building project reactNativePokedex with scheme reactNativePokedex and configuration Debug</string>
-			<key>timeStartedRecording</key>
-			<real>582815005.11287105</real>
-			<key>timeStoppedRecording</key>
-			<real>582815254.57845294</real>
-			<key>title</key>
-			<string>Building project reactNativePokedex with scheme reactNativePokedex and configuration Debug</string>
-			<key>uniqueIdentifier</key>
-			<string>9A8B6F4A-7B18-4F10-87F2-CAAF3F60FBC6</string>
+			<string>2221889C-0777-43F2-9881-AEF131E72543</string>
 		</dict>
 	</dict>
 </dict>
