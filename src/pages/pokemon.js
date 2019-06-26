@@ -1,6 +1,6 @@
 import React from "react";
-
-import { Text, WebView } from "react-native";
+import { Text } from "react-native";
+import { WebView } from "react-native-webview";
 
 const Pokemon = ({ navigation }) => (
   <>

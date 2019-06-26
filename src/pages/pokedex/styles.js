@@ -20,7 +20,6 @@ export const Title = styled.Text`
 //   width: 100%; */
 // `;
 export const PokemonList = styled.FlatList`
-  // })' //   } //     }; //       // alignItems: "center" //       // flexGrow: 0, //       // justifyContent: "space-between", //     return { //   contentContainerStyle: props => { // .attrs({
   padding: 0 18px 0 8px;
 `;
 export const Pokemon = styled.View`

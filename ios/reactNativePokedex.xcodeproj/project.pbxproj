@@ -45,6 +45,7 @@
 		AAEEFABCA6C0484D8186B6E3 /* Poppins ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07DD184CC1DC4087A6613541 /* Poppins ExtraLight.ttf */; };
 		5DA2A19CA3554F66A21ED66A /* Poppins SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86F7DD9CC3A7425D841B1340 /* Poppins SemiBold.ttf */; };
 		14CC4BBC31C84C64AAF2FFD8 /* Poppins.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6C9CC1B6B45473393F87C75 /* Poppins.ttf */; };
+		8020576FA2D8415C97A28686 /* libRNCWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F27BEA03FB7E4A17A9A434EC /* libRNCWebView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -360,6 +361,8 @@
 		07DD184CC1DC4087A6613541 /* Poppins ExtraLight.ttf */ = {isa = PBXFileReference; name = "Poppins ExtraLight.ttf"; path = "../assets/fonts/Poppins ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		86F7DD9CC3A7425D841B1340 /* Poppins SemiBold.ttf */ = {isa = PBXFileReference; name = "Poppins SemiBold.ttf"; path = "../assets/fonts/Poppins SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		C6C9CC1B6B45473393F87C75 /* Poppins.ttf */ = {isa = PBXFileReference; name = "Poppins.ttf"; path = "../assets/fonts/Poppins.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E290AFDC0351464988F07F02 /* RNCWebView.xcodeproj */ = {isa = PBXFileReference; name = "RNCWebView.xcodeproj"; path = "../node_modules/react-native-webview/ios/RNCWebView.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		F27BEA03FB7E4A17A9A434EC /* libRNCWebView.a */ = {isa = PBXFileReference; name = "libRNCWebView.a"; path = "libRNCWebView.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +393,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				3E604872BBDB439AA603C690 /* libRNGestureHandler.a in Frameworks */,
 				F435A2A8CA59497590ABCDAD /* libBVLinearGradient.a in Frameworks */,
+				8020576FA2D8415C97A28686 /* libRNCWebView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +586,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				24CB643A9A96479AB03113F5 /* RNGestureHandler.xcodeproj */,
 				343693C2545E45CF9E6B1B22 /* BVLinearGradient.xcodeproj */,
+				E290AFDC0351464988F07F02 /* RNCWebView.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1227,11 +1232,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 				);
 			};
 			name = Debug;
@@ -1256,11 +1263,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 				);
 			};
 			name = Release;
@@ -1285,6 +1294,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 				);
 			};
 			name = Debug;
@@ -1308,6 +1318,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 				);
 			};
 			name = Release;
@@ -1340,11 +1351,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 				);
 			};
 			name = Debug;
@@ -1377,11 +1390,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 				);
 			};
 			name = Release;
@@ -1413,11 +1428,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 				);
 			};
 			name = Debug;
@@ -1449,11 +1466,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 				);
 			};
 			name = Release;
