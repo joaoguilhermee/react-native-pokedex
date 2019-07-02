@@ -1,12 +1,13 @@
 // import { colors, fonts, metrics, general } from "../../style";
 import styled from "styled-components";
 import { Dimensions } from "react-native";
-/* font-size: ${props => props.fontSize ? props.fontSize : '14px'}; */
-const { width } = Dimensions.get("window");
+import { getStatusBarHeight } from "react-native-iphone-x-helper";
+
 export const Container = styled.View`
   flex: 1;
 
   background: #e5e5e5;
+  padding-top: ${getStatusBarHeight()}px;
 `;
 export const Title = styled.Text`
   color: #303943;
