@@ -166,7 +166,7 @@ export default function Pokedex(props) {
       <SafeAreaView>
         <PokemonList
           data={pokemons}
-          keyExtractor={item => item.name + item.id.toString()}
+          keyExtractor={item => String(item.name + item.id)}
           renderItem={renderItem}
           onEndReached={loadMore}
           onEndReachedThreshold={0.4}
