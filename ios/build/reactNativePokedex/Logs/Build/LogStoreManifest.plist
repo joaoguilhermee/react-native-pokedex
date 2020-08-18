@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>2221889C-0777-43F2-9881-AEF131E72543</key>
+		<key>864836B5-BD3C-4693-B92A-F49FEFF3555B</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,11 +15,13 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>2221889C-0777-43F2-9881-AEF131E72543.xcactivitylog</string>
+			<string>864836B5-BD3C-4693-B92A-F49FEFF3555B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>W</string>
+				<string>E</string>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>reactNativePokedex project</string>
@@ -30,13 +32,13 @@
 			<key>signature</key>
 			<string>Building project reactNativePokedex with scheme reactNativePokedex and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>583262243.58527505</real>
+			<real>590953226.35364103</real>
 			<key>timeStoppedRecording</key>
-			<real>583262272.48347497</real>
+			<real>590953250.97777104</real>
 			<key>title</key>
 			<string>Building project reactNativePokedex with scheme reactNativePokedex and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>2221889C-0777-43F2-9881-AEF131E72543</string>
+			<string>864836B5-BD3C-4693-B92A-F49FEFF3555B</string>
 		</dict>
 	</dict>
 </dict>

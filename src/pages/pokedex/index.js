@@ -43,48 +43,36 @@ export default function Pokedex(props) {
     fetchPokemons();
   }, []);
 
-  function fetchData(pokemon) {
+  async function fetchData(pokemon) {
     pokemon.id = pokemon.url.split("/").reverse()[1];
-    pokemon.image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
-      pokemon.id
-    }.png`;
-    axios
-      .all([
-        api.get(`/pokemon/${pokemon.id}`),
-        api.get(`/pokemon-species/${pokemon.id}`)
-      ])
-      .then(
-        axios.spread(function(dataResponse, speciesResponse) {
-          species = speciesResponse.data;
+    pokemon.image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`;
+    const dataResponse = await api.get(`/pokemon/${pokemon.id}`);
+    const speciesResponse = await api.get(`/pokemon-species/${pokemon.id}`);
+    const species = speciesResponse.data;
 
-          pokemon.data = dataResponse.data;
-          pokemon.species = species;
-          pokemon.color = colors[species.color.name];
-          pokemon.new = false;
-          return pokemon;
-        })
-      );
+    pokemon.data = dataResponse.data;
+    pokemon.species = species;
+    pokemon.color = colors[species.color.name];
+    pokemon.new = false;
     return pokemon;
   }
   async function fetchPokemons(page = 1) {
     let offset;
     let total;
     offset = 20 * (page - 1);
-    let itens = await api
-      .get(`/pokemon?offset=${offset}&limit=20`)
-      .then(response => {
-        const { data } = response;
-        let { results } = data;
-        results = results.map(pokemon => {
-          return fetchData(pokemon);
-        });
-        total = data.count;
-
-        setTotal(total);
-        setPage(page);
-
-        return results;
+    let itens = await api.get(`/pokemon?offset=${offset}&limit=20`).then(response => {
+      const { data } = response;
+      let { results } = data;
+      results = results.map(async pokemon => {
+        return await fetchData(pokemon);
       });
+      total = data.count;
+
+      setTotal(total);
+      setPage(page);
+
+      return results;
+    });
     let list = [];
     if (page == 1) {
       list = itens;
